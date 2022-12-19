@@ -10,10 +10,10 @@ public class App {
         System.out.println(bean.getMessage());
 
         HelloWorld bean1 = (HelloWorld) applicationContext.getBean("helloworld");
-        System.out.println("Сравнение бинов Helloworld: " + bean.equals(bean1));
+        System.out.println("Сравнение бинов Helloworld: " + (bean == bean1));
 
         Cat catBean = (Cat) applicationContext.getBean("cat");
         Cat catBean1 = (Cat) applicationContext.getBean("cat");
-        System.out.println("Сравнение бинов сat: " + catBean.equals(catBean1));
+        System.out.println("Сравнение бинов сat: " + (catBean==catBean1));
     }
 }
